@@ -12,8 +12,8 @@ let Product = db.define(
       notNull: true,
     },
     negotiable: {
-      type: Sequelize.BOOLEAN,
-      defaultValue: true,
+      type: Sequelize.STRING,
+      notNull: true,
     },
     seller_name: {
       type: Sequelize.STRING,
@@ -24,20 +24,22 @@ let Product = db.define(
       notNull: true,
     },
     category: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: "categories",
-        key: "id",
-        deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE,
-      },
+      type: Sequelize.STRING,
+      notNull: true,
+      // references: {
+      //   model: "categories",
+      //   key: "id",
+      //   deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE,
+      // },
     },
     city: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: "cities",
-        key: "id",
-        deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE,
-      },
+      type: Sequelize.STRING,
+      notNull: true,
+      // references: {
+      //   model: "categories",
+      //   key: "id",
+      //   deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE,
+      // },
     },
   },
   {

@@ -1,11 +1,13 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import tableReducer from './table-list/table-reducer';
-import waiterReducer from './waiter-list/waiter-reducer';
-import menuReducer from './menu-list/menu-reducer'
+import sellReducer from "./sell-page/sell-page.reducer";
+import productReducer from "./products/products.reducer";
+
+// import tableReducer from './table-list/table-reducer';
+// import waiterReducer from './waiter-list/waiter-reducer';
+// import menuReducer from './menu-list/menu-reducer'
 
 export const rootReducer = combineReducers({
-    tableReducer: tableReducer,
-    waiterReducer: waiterReducer,
-    menuReducer: menuReducer
-})
+  sellReducer: sellReducer,
+  productReducer: productReducer,
+});

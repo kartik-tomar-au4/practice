@@ -5,7 +5,7 @@ let Category = db.define(
   "categories",
   {
     category: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING,
       notNull: true,
     },
     description: {

@@ -3,12 +3,12 @@ const router = express.Router();
 const Category = require("../Models/Category");
 
 router.post("/categories", async (req, res) => {
+  console.log(req.body);
   try {
     const { body } = req;
     let category = await Category.create({
       category: body.category,
       description: body.description,
-      floor: body.floor,
     });
     res.send(category);
   } catch (error) {
